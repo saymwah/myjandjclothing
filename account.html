@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - J&J Clothing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"">  
+</head>
+<html>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="logo" width="300px"></a>
+                </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="contactUs.html">Contact us</a></li>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="faqs.html">FAQS</a></li>
+                            <li><a href="">About</a></li>
+                        </ul>
+                    </nav>
+                    <img src="images/cart.png" width="30px" height="30px">
+                    <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+         <!---------- A C C O U N T    P A G E ---------->
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 images">
+                        <img src="images/signup.png" width="100%" alt="">
+                    </div>
+                    <div class="col-2 form-panel">
+                        <div class="form-container">
+                            <div class="form-adjust">
+                                <div class="form-btn">
+                                    <span onclick="login()">Login</span>
+                                    <span onclick="register()">Register</span>
+                                    <hr id="Indicator">
+                                </div>    
+                                    <form id= "LoginForm">
+                                        <input type="text" placeholder="Username">
+                                        <input type="passowrd" placeholder="Password">
+                                        <button type="submit" class="btn">Login</button>
+                                        <a href="">Forgot password</a>
+                                    </form>
+
+                                    <form id= "RegForm">
+                                        <input type="text" placeholder="Username">
+                                        <input type="email" placeholder="Username">
+                                        <input type="passowrd" placeholder="Password">
+                                        <button type="submit" class="btn">Register</button>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-----F O O T E R------>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download our App</h3>
+                        <p>Download App for Android and iOS mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png" alt="">
+                            <img src="images/app-store.png" alt="">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/logo.png" alt="">
+                        <p>Fashion is the armor to survive the reality of everyday life.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2020 - Quiet Group</p>
+            </div>
+        </div>
+
+
+        <!------J S   F O R   M E N U------>
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px";
+
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight = "280px";
+                }else{
+                    MenuItems.style.maxHeight = "0px";
+                }
+            }
+        </script>
+
+        <!---------   JS FOR TOGGLE FORM   ------------>
+        <script>
+            var LoginForm = document.getElementById("LoginForm");
+            var RegForm = document.getElementById("RegForm");
+            var Indicator = document.getElementById("Indicator");
+            
+            function register(){
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(140px)";
+            }
+            function login(){
+                RegForm.style.transform = "translateX(420px)";
+                LoginForm.style.transform = "translateX(420px)";
+                Indicator.style.transform = "translateX(0px)";
+            }
+        </script>
+    </body>
+</html>
